@@ -35,6 +35,48 @@ var pdpPrice = document.querySelector('.pdp-sales-block__price-final');
 console.log('Основная цена на товар:', pdpPrice.textContent.trim());
 ```
 
-![image](https://github.com/aleksa-mnk/test-task/assets/61269026/f651001d-45bf-40fd-a8ac-352c7ae41182)
+![image](https://github.com/aleksa-mnk/test-task/assets/61269026/24618c67-66e9-4cf9-a003-1082de0e8f26)
+
+
+## https://price.ru/noutbuki/apple-macbook-air-mgn63/
+
+```css
+.offer-list .p-c-price:first-child .p-c-price__price__link .main-price
+.offer-list .p-c-price:nth-child(2) .p-c-price__price__link .main-price
+.l-more-tablet
+.popular-model .price .currency
+и 2 js
+```
+
+```javascript
+// Первая цена на товар в списке продавцов
+var firstPrice = document.querySelector('.offer-list .p-c-price:first-child .p-c-price__price__link .main-price');
+console.log('Первая цена:', firstPrice.textContent);
+
+// Вторая цена в списке продавцов
+var secondPrice = document.querySelector('.offer-list .p-c-price:nth-child(2) .p-c-price__price__link .main-price');
+console.log('Вторая цена:', secondPrice.textContent);
+
+// Последняя цена в списке продавцов
+var priceElements = document.querySelectorAll('.offer-list .p-c-price__price');
+var lastPriceElement = priceElements[priceElements.length - 1];
+var lastPrice = lastPriceElement.querySelector('.main-price');
+console.log('Последняя цена:', lastPrice.textContent.trim());
+
+// Вкладка, соседняя справа от активной ("Цены")
+var activeTab = document.querySelector('.r-text.base.active');
+var nextTab = activeTab.parentElement.nextElementSibling.querySelector('.r-text');
+console.log('Вкладка, справа от активной:', nextTab.textContent.trim());
+
+// Заголовок ("Ноутбук Apple MacBook Air MGN63")
+var pdpTitle = document.querySelector('.l-more-tablet');
+console.log('Заголовок:', pdpTitle.textContent.trim());
+
+// Основная цена на товар ("85 980 ₽")
+var pdpPrice = document.querySelector('.popular-model .price .currency');
+console.log('Основная цена на товар:', pdpPrice.textContent.trim());
+```
+
+![image](https://github.com/aleksa-mnk/test-task/assets/61269026/021b20a9-9b74-4c0d-bbfc-3feb777a51d2)
 
 
